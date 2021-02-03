@@ -53,7 +53,7 @@ export default function DataType() {
     console.log("元组:", tuple);
     console.log("元组:", tuple[0], tuple[1]);
     // //不能越界访问
-    // console.log("元组:",  tuple[2]);
+    // console.log("元组:", tuple[2]);
     // //类型必须保持一致
     // tuple = [1, 2];
     tuple = ["1", 2];
@@ -84,6 +84,7 @@ export default function DataType() {
         blue = 30,
     }
     console.log("枚举-全部手动赋值:", Color3);
+    //也可以根据值获取映射名称
     console.log("枚举-映射:", Color3[20]);
 
     /*
@@ -135,19 +136,13 @@ export default function DataType() {
      * never
      * never类型表示的是那些永不存在的值的类型。
      * */
-    //never类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型；
+    //never类型是那些总是会抛出异常或根本就不会有返回值的函数表达式；
     function never1(): never {
         throw new Error();
     }
     function never2(): never {
         while (true) {}
     }
-    let never3 = (): never => {
-        return never1();
-    };
-    // never类型是任何类型的子类型，也可以赋值给任何类型；
-    //没有类型是never的子类型或可以赋值给never类型（除了never本身之外）
-    //即使 any也不可以赋值给never
 
     /*
      * object
