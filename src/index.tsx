@@ -4,9 +4,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // import DataType from "./section/数据类型";
-import DataType from "./section/类型断言";
+// import DataType from "./section/类型断言";
+import "./section/接口";
 
-DataType();
 ReactDOM.render(
     <React.StrictMode>
         <App />
